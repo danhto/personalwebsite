@@ -11,6 +11,7 @@ import Navigation from './components/Navigation/Navigation'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import './components/MDBPills/MDBPills.css'
 import './components/MDBJumbotron/MDBJumbotron.css'
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 ReactDOM.render(<BrowserRouter>
                     <div>
