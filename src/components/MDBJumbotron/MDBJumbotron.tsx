@@ -1,6 +1,6 @@
 import React from 'react'
-import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBProgress } from "mdbreact";
-import { CarouselProvider, Slider, Slide, DotGroup, ImageWithZoom } from 'pure-react-carousel';
+import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBProgress, MDBBadge } from "mdbreact";
+import { CarouselProvider, Slider, Slide, ImageWithZoom, Dot } from 'pure-react-carousel';
 const robot = require('../../assets/irobot.jpg')
 const knowledge = require('../../assets/knowledge.png')
 const cat = require('../../assets/cat.jpg')
@@ -17,10 +17,30 @@ interface Props {
 }
 
 interface State {
-
+    text: string,
+    autoPlay: boolean,
+    counter: number
 }
 
+const descriptionArray = [
+    "My dog, Cat!",
+    "Hockey: The Toronto Maple Leafs!",
+    "Snowboarding!",
+    "Traveling: Japan!",
+    "Traveling: Prague!",
+    "Traveling: Iceland!",
+    "Traveling: Grand Canyon!",
+]
+
 class MDBJumbotronV2 extends React.Component<Props,State> {
+    constructor (props) {
+        super(props)
+        this.state = {
+            text: descriptionArray[0],
+            autoPlay: true,
+            counter: 0,
+        }
+    }
 
     getLeadContent = () => {
         if (this.props.display === 1) {
@@ -47,8 +67,67 @@ class MDBJumbotronV2 extends React.Component<Props,State> {
         }
     }
 
-    handleFocus = () => {
-        console.log("FOCUS")
+    handleCat = () => {
+        this.setState({
+            text: "My dog, Cat!",
+            counter: 0
+        })
+    }
+
+    handleLeafs = () => {
+        this.setState({
+            text: "Hockey: The Toronto Maple Leafs!",
+            counter: 1
+        })
+    }
+
+    handleSnowboarding = () => {
+        this.setState({
+            text: "Snowboarding!",
+            counter: 2
+        })
+    }
+
+    handleJapan = () => {
+        this.setState({
+            text: "Traveling: Japan!",
+            counter: 3
+        })
+    }
+
+    handleIceland = () => {
+        this.setState({
+            text: "Traveling: Iceland!",
+            counter: 5
+        })
+    }
+
+    handlePrague = () => {
+        this.setState({
+            text: "Traveling: Prague!",
+            counter: 4
+        })
+    }
+
+    handleCanyon = () => {
+        this.setState({
+            text: "Traveling: Grand Canyon!",
+            counter: 6
+        })
+    }
+
+    updateHeader = () => {
+        console.log("Updating header...")
+        var ct = this.state.counter == 6 ? 0 : this.state.counter + 1
+
+        this.setState({
+            counter: ct,
+            text: descriptionArray[ct]
+        })
+    }
+
+    componentDidMount() {
+        setInterval(this.updateHeader, 7500)
     }
 
     getBodyContent = () => {
@@ -102,45 +181,49 @@ class MDBJumbotronV2 extends React.Component<Props,State> {
         }
         else if (this.props.display === 3) {
             return (
-                <CarouselProvider
-                    naturalSlideWidth={750}
-                    naturalSlideHeight={475}
-                    totalSlides={8}
-                    isPlaying={true}
-                    interval={7500}
-                    >
-                    <DotGroup />
-                    <Slider>
-                        <Slide className="slide-image-holder" index={0}>
-                            <ImageWithZoom src={cat} />
-                            <h2 className="slide-image-description">My dog Cat!</h2>
-                        </Slide>
-                        <Slide className="slide-image-holder" index={1}>
-                            <ImageWithZoom src={leafs} />
-                            <h2 className="slide-image-description">Hockey: The Toronto Maple Leafs!</h2>
-                        </Slide>
-                        <Slide className="slide-image-holder" index={2}>
-                            <ImageWithZoom src={snowboarding} />
-                            <h2 className="slide-image-description">Snowboarding!</h2>
-                        </Slide>
-                        <Slide className="slide-image-holder" index={3}>
-                            <ImageWithZoom src={japan} />
-                            <h2 className="slide-image-description">Traveling: Japan!</h2>
-                        </Slide>
-                        <Slide className="slide-image-holder" index={4}>
-                            <ImageWithZoom src={prague} />
-                            <h2 className="slide-image-description">Traveling: Prague!</h2>
-                        </Slide>
-                        <Slide className="slide-image-holder" index={5}>
-                            <ImageWithZoom src={iceland} />
-                            <h2 className="slide-image-description">Traveling: Iceland!</h2>
-                        </Slide>
-                        <Slide className="slide-image-holder" index={6}>
-                            <ImageWithZoom src={grandcanyon} />
-                            <h2 className="slide-image-description">Traveling: Grand Canyon!</h2>
-                        </Slide>
-                    </Slider>
-                </CarouselProvider>
+                <div>
+                    <div>
+                    <MDBBadge className="mdb-badge-header" color="primary">{this.state.text}</MDBBadge>
+                    </div>
+                    <CarouselProvider
+                        naturalSlideWidth={750}
+                        naturalSlideHeight={475}
+                        totalSlides={7}
+                        isPlaying={this.state.autoPlay}
+                        interval={7500}
+                        >
+                        <Dot slide={0} onClick={this.handleCat}>{}</Dot>
+                        <Dot slide={1} onClick={this.handleLeafs}>{}</Dot>
+                        <Dot slide={2} onClick={this.handleSnowboarding}>{}</Dot>
+                        <Dot slide={3} onClick={this.handleJapan}>{}</Dot>
+                        <Dot slide={4} onClick={this.handlePrague}>{}</Dot>
+                        <Dot slide={5} onClick={this.handleIceland}>{}</Dot>
+                        <Dot slide={6} onClick={this.handleCanyon}>{}</Dot>
+                        <Slider>
+                            <Slide className="slide-image-holder" index={0}>
+                                <ImageWithZoom src={cat} />
+                            </Slide>
+                            <Slide className="slide-image-holder" index={1}>
+                                <ImageWithZoom src={leafs} />
+                            </Slide>
+                            <Slide className="slide-image-holder" index={2}>
+                                <ImageWithZoom src={snowboarding} />
+                            </Slide>
+                            <Slide className="slide-image-holder" index={3}>
+                                <ImageWithZoom src={japan} />
+                            </Slide>
+                            <Slide className="slide-image-holder" index={4}>
+                                <ImageWithZoom src={prague} />
+                            </Slide>
+                            <Slide className="slide-image-holder" index={5}>
+                                <ImageWithZoom src={iceland} />
+                            </Slide>
+                            <Slide className="slide-image-holder" index={6}>
+                                <ImageWithZoom src={grandcanyon} />
+                            </Slide>
+                        </Slider>
+                    </CarouselProvider>
+                </div>
             )
         }
     }
