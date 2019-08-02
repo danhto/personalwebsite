@@ -8,6 +8,7 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import Aboutme from './components/Aboutme/Aboutme'
 import Navigation from './components/Navigation/Navigation'
+import MDBPanel from './components/MDBPanel/MDBPanel'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import './components/MDBPills/MDBPills.css'
 import './components/MDBJumbotron/MDBJumbotron.css'
@@ -16,10 +17,17 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 ReactDOM.render(<BrowserRouter>
                     <div>
                         <Navigation />
-                        <Switch>
-                            <Route exact path='/' component={App} />
-                            <Route path='/about' component={Aboutme} />
-                        </Switch>
+                        <div className='main-content'>
+                            <div className='main-panel-content'>
+                                <Switch>
+                                    <Route exact path='/' component={App} />
+                                    <Route path='/about' component={Aboutme} />
+                                </Switch>
+                            </div>
+                            <div className='side-panel-content'>
+                                <MDBPanel />
+                            </div>
+                        </div>
                     </div>
                 </BrowserRouter>, document.getElementById('root'));
 
