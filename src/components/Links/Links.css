@@ -1,0 +1,16 @@
+.links-content {
+    padding-top: 3%;
+}
+
+.links-header {
+    padding-bottom: 3%;
+    border-bottom: 1px black solid;
+}
+
+.links-linkedin {
+    font-size: 30px;
+}
+
+.links-github {
+    font-size: 30px;
+}

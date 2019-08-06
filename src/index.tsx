@@ -7,12 +7,14 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import Aboutme from './components/Aboutme/Aboutme'
+import Links from './components/Links/Links'
 import Navigation from './components/Navigation/Navigation'
 import MDBPanel from './components/MDBPanel/MDBPanel'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import './components/MDBPills/MDBPills.css'
 import './components/MDBJumbotron/MDBJumbotron.css'
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import './components/Links/Links.css'
 
 ReactDOM.render(<BrowserRouter>
                     <div>
@@ -22,6 +24,7 @@ ReactDOM.render(<BrowserRouter>
                                 <Switch>
                                     <Route exact path='/' component={App} />
                                     <Route path='/about' component={Aboutme} />
+                                    <Route path='/links' component={Links} />
                                 </Switch>
                             </div>
                             <div className='side-panel-content'>

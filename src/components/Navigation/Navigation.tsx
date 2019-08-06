@@ -30,7 +30,7 @@ class Navigation extends React.Component {
                         <MDBNavLink to="/about">About Me</MDBNavLink>
                     </MDBNavItem>
                     <MDBNavItem>
-                        <MDBNavLink to="#!">Links</MDBNavLink>
+                        <MDBNavLink to="/links">Links</MDBNavLink>
                     </MDBNavItem>
                     {/* <MDBNavItem>
                         <MDBDropdown>
