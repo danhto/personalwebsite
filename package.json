@@ -46,8 +46,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://danto.github.io/personalwebsite",
+  "homepage": "https://danhto.github.io/personalwebsite/",
   "devDependencies": {
-    "gh-pages": "^2.1.0"
+    "gh-pages": "2.0"
   }
 }
