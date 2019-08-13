@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/personalwebsite/static/css/main.aa86ed91.chunk.css",
+    "main.js": "/personalwebsite/static/js/main.e5112688.chunk.js",
+    "main.js.map": "/personalwebsite/static/js/main.e5112688.chunk.js.map",
+    "runtime~main.js": "/personalwebsite/static/js/runtime~main.29a1488c.js",
+    "runtime~main.js.map": "/personalwebsite/static/js/runtime~main.29a1488c.js.map",
+    "static/css/2.a5ebe474.chunk.css": "/personalwebsite/static/css/2.a5ebe474.chunk.css",
+    "static/js/2.5bffaf1c.chunk.js": "/personalwebsite/static/js/2.5bffaf1c.chunk.js",
+    "static/js/2.5bffaf1c.chunk.js.map": "/personalwebsite/static/js/2.5bffaf1c.chunk.js.map",
+    "index.html": "/personalwebsite/index.html",
+    "precache-manifest.a077d06581ebacf3613d1a135592aa5b.js": "/personalwebsite/precache-manifest.a077d06581ebacf3613d1a135592aa5b.js",
+    "service-worker.js": "/personalwebsite/service-worker.js",
+    "static/css/2.a5ebe474.chunk.css.map": "/personalwebsite/static/css/2.a5ebe474.chunk.css.map",
+    "static/css/main.aa86ed91.chunk.css.map": "/personalwebsite/static/css/main.aa86ed91.chunk.css.map",
+    "static/media/mdb.css": "/personalwebsite/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/cat.jpg": "/personalwebsite/static/media/cat.4d284ef0.jpg",
+    "static/media/all.min.css": "/personalwebsite/static/media/fa-solid-900.f14c3b2f.ttf",
+    "static/media/grandcanyon.jpg": "/personalwebsite/static/media/grandcanyon.06c39b60.jpg",
+    "static/media/iceland.jpg": "/personalwebsite/static/media/iceland.6fb9952f.jpg",
+    "static/media/irobot.jpg": "/personalwebsite/static/media/irobot.b3e1e89a.jpg",
+    "static/media/japan.jpg": "/personalwebsite/static/media/japan.24e968b6.jpg",
+    "static/media/knowledge.png": "/personalwebsite/static/media/knowledge.6e575bdb.png",
+    "static/media/leafs.jpg": "/personalwebsite/static/media/leafs.df616bb5.jpg",
+    "static/media/logo.svg": "/personalwebsite/static/media/logo.5d5d9eef.svg",
+    "static/media/prague.jpg": "/personalwebsite/static/media/prague.df34e8fa.jpg",
+    "static/media/snowboarding.jpg": "/personalwebsite/static/media/snowboarding.446e9b3d.jpg"
+  }
+}
