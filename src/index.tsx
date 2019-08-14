@@ -22,7 +22,7 @@ ReactDOM.render(<BrowserRouter>
                         <div className='main-content'>
                             <div className='main-panel-content'>
                                 <Switch>
-                                    <Route path='/' component={App} />
+                                    <Route exact path='/' component={App} />
                                     <Route path='/about' component={Aboutme} />
                                     <Route path='/links' component={Links} />
                                 </Switch>
