@@ -24,7 +24,7 @@ class Navigation extends React.Component {
                 <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
                     <MDBNavbarNav left>
                     <MDBNavItem active>
-                        <MDBNavLink to="/">Home</MDBNavLink>
+                        <MDBNavLink to="/personalwebsite">Home</MDBNavLink>
                     </MDBNavItem>
                     <MDBNavItem>
                         <MDBNavLink to="/about">About Me</MDBNavLink>
