@@ -15,6 +15,8 @@ import './components/MDBPills/MDBPills.css'
 import './components/MDBJumbotron/MDBJumbotron.css'
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import './components/Links/Links.css'
+import MDBPanelStarwars from './components/MDBPanel/MDBPanelStarwars';
+import './components/MDBPanel/MDBPanelStarwars.css'
 
 ReactDOM.render(<BrowserRouter>
                     <div>
@@ -29,6 +31,8 @@ ReactDOM.render(<BrowserRouter>
                             </div>
                             <div className='side-panel-content'>
                                 <MDBPanel />
+                                <MDBPanelStarwars api="people"/>
+                                <MDBPanelStarwars api="starships"/>
                             </div>
                         </div>
                     </div>

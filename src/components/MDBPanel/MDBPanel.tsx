@@ -30,6 +30,33 @@ class PanelPage extends React.Component<GeolocatedProps> {
         errors: ""
     }    
 
+    formatTemperature = (temperature) => {
+        var color
+        if (temperature >= 30) {
+            color = "red"
+        }
+        else if (temperature >= 25 && temperature < 30) {
+            color = "orange"
+        }
+        else if (temperature >= 15 && temperature < 25) {
+            color = "green"
+        }
+        else if (temperature > 5 && temperature < 15) {
+            color = "cyan"
+        }
+        else {
+            color = "blue"
+        }
+
+        const pStyle = {
+            color: color
+        }
+
+        return (
+            <p className="temp-content-temperature" style={pStyle}>{temperature} °C</p>
+        )
+    }
+
     render() {
         const getWeatherData = () => {
             console.log("Getting weather data with state...")
@@ -68,14 +95,14 @@ class PanelPage extends React.Component<GeolocatedProps> {
         return (
             <MDBContainer>
                 <MDBCard className="card-body" style={{ width: "22rem", marginTop: "1rem" }}>
-                    <MDBCardTitle>Current Weather</MDBCardTitle>
+                    <MDBCardTitle className="panel-title">Current Weather</MDBCardTitle>
                     <MDBCardText>
                         {   
                             this.props.isGeolocationEnabled && this.props.coords && getWeatherData() && this.state.dataReady ?
                             <div className="temp-content">
                                 <p className="temp-content-location">The current temperature for {this.state.weather.locale} is:</p>
-                                <p className="temp-content-temperature">{this.state.weather.temperature}</p>
-                                <p className="temp-content-description">The overall forecast is {this.state.weather.description}</p>
+                                {this.formatTemperature(this.state.weather.temperature)}
+                                <p className="temp-content-description">The overall forecast is {this.state.weather.description}:</p>
                                 <img className="temp-content-icon" src={this.state.weather.icon} />
                             </div> :
                             <>No location data! {this.state.errors}</>
