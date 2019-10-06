@@ -160,11 +160,11 @@ class MDBJumbotronV2 extends React.Component<Props,State> {
                         <h4>HTML/CSS</h4>
                         <MDBProgress value={60} className='my-2' />
                         <h4>Go Lang</h4>
-                        <MDBProgress value={50} className='my-2' />
+                        <MDBProgress value={60} className='my-2' />
                         <h4>React</h4>
-                        <MDBProgress value={40} className='my-2' />
+                        <MDBProgress value={70} className='my-2' />
                         <h4>Typescript/JS</h4>
-                        <MDBProgress value={30} className='my-2' />
+                        <MDBProgress value={40} className='my-2' />
                         <h4>Python</h4>
                         <MDBProgress value={30} className='my-2' />
                     </div>
@@ -179,7 +179,6 @@ class MDBJumbotronV2 extends React.Component<Props,State> {
                         <MDBProgress value={60} className='my-2' />    
                         <h4>Travis</h4>
                         <MDBProgress value={30} className='my-2' />
-                        
                     </div>
                 </div>
             )
