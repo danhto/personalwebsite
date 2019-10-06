@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {MDBBtn} from 'mdbreact'
+import {MDBBtn, MDBNavLink} from 'mdbreact'
 
 const App = () => {
     const [visible, setVisible] = useState(false)
@@ -20,9 +20,7 @@ const App = () => {
             </div>
             {visible ?
                 <div className="app-main-hidden-content">
-                    <MDBBtn gradient="blue" href='/about'>
-                        <h1><i>TELL ME MORE!</i></h1>
-                    </MDBBtn>  
+                    <MDBNavLink to="/personalwebsite/about">TELL ME MORE!</MDBNavLink>
                 </div>
             : null }
             <div className="app-main-logo">

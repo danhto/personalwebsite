@@ -1,6 +1,5 @@
 import React from 'react'
-import {MDBContainer,MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
-    MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from 'mdbreact'
+import {MDBContainer,MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline} from 'mdbreact'
 
 class Navigation extends React.Component {
     state = {
@@ -14,6 +13,8 @@ class Navigation extends React.Component {
     }
 
     render() {
+        const { isOpen } = this.state
+
         return (
             <MDBContainer fluid>
                 <MDBNavbar color="indigo" dark expand="md">
@@ -21,9 +22,9 @@ class Navigation extends React.Component {
                     <strong className="white-text">DAN TO</strong>
                 </MDBNavbarBrand>
                 <MDBNavbarToggler onClick={this.toggleCollapse} />
-                <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+                <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>
                     <MDBNavbarNav left>
-                        <MDBNavItem active>
+                        <MDBNavItem>
                             <MDBNavLink to="/personalwebsite">Home</MDBNavLink>
                         </MDBNavItem>
                         <MDBNavItem>

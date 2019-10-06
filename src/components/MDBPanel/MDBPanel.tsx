@@ -58,12 +58,15 @@ class PanelPage extends React.Component<GeolocatedProps> {
     }
 
     render() {
+        const {dataReady, errors, weather} = this.state;
+        const {coords, isGeolocationEnabled} = this.props;
+
         const getWeatherData = () => {
             console.log("Getting weather data with state...")
             console.log(this.state)
-            if (this.props.coords && !this.state.dataReady && this.state.errors === "") {
+            if (coords && !dataReady && errors === "") {
                 console.log("Making api call...")
-                var lattlong = 'lat=' + this.props.coords.latitude + '&lon=' + this.props.coords.longitude
+                var lattlong = 'lat=' + coords.latitude + '&lon=' + coords.longitude
                 var appId = "&units=metric&APPID=" + process.env.REACT_APP_WEATHER_API_KEY
                 axios.get("https://api.openweathermap.org/data/2.5/weather?" + lattlong + appId)
                 .then(response => {
@@ -98,14 +101,14 @@ class PanelPage extends React.Component<GeolocatedProps> {
                     <MDBCardTitle className="panel-title">Current Weather</MDBCardTitle>
                     <MDBCardText>
                         {   
-                            this.props.isGeolocationEnabled && this.props.coords && getWeatherData() && this.state.dataReady ?
+                            isGeolocationEnabled && coords && getWeatherData() && dataReady ?
                             <div className="temp-content">
-                                <p className="temp-content-location">The current temperature for {this.state.weather.locale} is:</p>
-                                {this.formatTemperature(this.state.weather.temperature)}
-                                <p className="temp-content-description">The overall forecast is {this.state.weather.description}:</p>
-                                <img className="temp-content-icon" src={this.state.weather.icon} />
+                                <p className="temp-content-location">The current temperature for {weather.locale} is:</p>
+                                {this.formatTemperature(weather.temperature)}
+                                <p className="temp-content-description">The overall forecast is {weather.description}:</p>
+                                <img className="temp-content-icon" src={weather.icon} />
                             </div> :
-                            <>No location data! {this.state.errors}</>
+                            <>No location data! {errors}</>
                         }
                     </MDBCardText>
                 </MDBCard>

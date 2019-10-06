@@ -66,9 +66,6 @@ class MDBPanelStarwars extends React.Component<Props, State> {
     getStarwarsData = () => {
         axios.get("https://swapi.co/api/"+this.props.api+"/"+this.state.index+"/")
         .then(response => {
-            console.log("Response received from call to api for " + this.props.api + " using id " + this.state.index)
-            console.log(response)
-
             switch (this.props.api) {
                 case "people": {
                     this.setState({
@@ -120,7 +117,6 @@ class MDBPanelStarwars extends React.Component<Props, State> {
             }
         })
         .catch(error => {
-            console.log(error)
             this.setState({
                 errors: "Something happened can't get Star Wars goodies :("
             })
@@ -132,10 +128,13 @@ class MDBPanelStarwars extends React.Component<Props, State> {
     }
 
     render() {
+        const {person, starship, dataRetrieved, errors} = this.state;
+        const {api} = this.props;
+
         const getStarwarsContent = () => {
-            switch (this.props.api) {
+            switch (api) {
                 case "people": {
-                    const pData = this.state.person
+                    const pData = person
 
                     return (
                         <>
@@ -153,7 +152,7 @@ class MDBPanelStarwars extends React.Component<Props, State> {
                     )
                 }
                 case "starships": {
-                    const sData = this.state.starship
+                    const sData = starship
 
                     return (
                         <>
@@ -174,7 +173,6 @@ class MDBPanelStarwars extends React.Component<Props, State> {
                     )
                 }
             }            
-                
         }
 
         return (
@@ -183,11 +181,11 @@ class MDBPanelStarwars extends React.Component<Props, State> {
                     <MDBCardTitle className="panel-title">Star Wars: Random Daily Education!</MDBCardTitle>
                     <MDBCardText>
                         {   
-                            this.state.dataRetrieved ?
+                            dataRetrieved ?
                             <div className="starwars-content">
                                 {getStarwarsContent()}
                             </div> :
-                            <>{this.state.errors}</>
+                            <>{errors}</>
                         }
                     </MDBCardText>
                 </MDBCard>

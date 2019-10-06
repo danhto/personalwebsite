@@ -43,10 +43,12 @@ class MDBJumbotronV2 extends React.Component<Props,State> {
     }
 
     getLeadContent = () => {
-        if (this.props.display === 1) {
+        const {display} = this.props;
+
+        if (display === 1) {
             //return <p className='lead'>DAN TO</p>
         }
-        else if (this.props.display === 2) {
+        else if (display === 2) {
             return (
                 <div className="skill-title-content">
                     <p>
@@ -58,7 +60,7 @@ class MDBJumbotronV2 extends React.Component<Props,State> {
                 </div>
             )
         }
-        else if (this.props.display === 3) {
+        else if (display === 3) {
             return (
                 <p>
                     These are some of the things that fuel my soul!
@@ -131,7 +133,10 @@ class MDBJumbotronV2 extends React.Component<Props,State> {
     }
 
     getBodyContent = () => {
-        if (this.props.display === 1) {
+        const {display} = this.props;
+        const {text, autoPlay} = this.state;
+
+        if (display === 1) {
             return (
                 <div>
                     <p>
@@ -146,7 +151,7 @@ class MDBJumbotronV2 extends React.Component<Props,State> {
                 </div>
             )
         }
-        else if (this.props.display === 2) {
+        else if (display === 2) {
             return (
                 <div className="skill-summary">
                     <div className="skill-languages">
@@ -179,17 +184,17 @@ class MDBJumbotronV2 extends React.Component<Props,State> {
                 </div>
             )
         }
-        else if (this.props.display === 3) {
+        else if (display === 3) {
             return (
                 <div>
                     <div>
-                    <MDBBadge className="mdb-badge-header" color="primary">{this.state.text}</MDBBadge>
+                    <MDBBadge className="mdb-badge-header" color="primary">{text}</MDBBadge>
                     </div>
                     <CarouselProvider
                         naturalSlideWidth={750}
                         naturalSlideHeight={475}
                         totalSlides={7}
-                        isPlaying={this.state.autoPlay}
+                        isPlaying={autoPlay}
                         interval={7500}
                         >
                         <Dot slide={0} onClick={this.handleCat}>{}</Dot>
@@ -228,17 +233,17 @@ class MDBJumbotronV2 extends React.Component<Props,State> {
         }
     }
     
-
     render () {
-        const leadContent = this.getLeadContent()
-        const bodyContent = this.getBodyContent()
+        const leadContent = this.getLeadContent();
+        const bodyContent = this.getBodyContent();
+        const {title} = this.props;
 
         return (
             <MDBContainer className="mt-5 text-center">
             <MDBRow>
               <MDBCol>
                 <MDBJumbotron>
-                    <h2 className="h1 display-3">{this.props.title}</h2>
+                    <h2 className="h1 display-3">{title}</h2>
                     {leadContent}
                     <hr className="my-2" />
                     {bodyContent}
