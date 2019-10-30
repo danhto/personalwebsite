@@ -17,6 +17,8 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import './components/Links/Links.css'
 import MDBPanelStarwars from './components/MDBPanel/MDBPanelStarwars';
 import './components/MDBPanel/MDBPanelStarwars.css'
+import Sorter from './components/Sorter/Sorter';
+import './components/Sorter/Sorter.css';
 
 ReactDOM.render(<BrowserRouter>
                     <div>
@@ -27,6 +29,7 @@ ReactDOM.render(<BrowserRouter>
                                     <Route exact path='/personalwebsite' component={App} />
                                     <Route path='/personalwebsite/about' component={Aboutme} />
                                     <Route path='/personalwebsite/links' component={Links} />
+                                    <Route path='/personalwebsite/apps' component={Sorter} />
                                 </Switch>
                             </div>
                             <div className='side-panel-content'>
