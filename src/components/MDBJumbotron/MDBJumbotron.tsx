@@ -120,7 +120,7 @@ class MDBJumbotronV2 extends React.Component<Props,State> {
 
     updateHeader = () => {
         console.log("Updating header...")
-        var ct = this.state.counter == 6 ? 0 : this.state.counter + 1
+        var ct = this.state.counter === 6 ? 0 : this.state.counter + 1
 
         this.setState({
             counter: ct,

@@ -67,7 +67,7 @@ class PanelPage extends React.Component<GeolocatedProps> {
             if (coords && !dataReady && errors === "") {
                 console.log("Making api call...")
                 var lattlong = 'lat=' + coords.latitude + '&lon=' + coords.longitude
-                var appId = "&units=metric&APPID=" + process.env.REACT_APP_WEATHER_API_KEY
+                var appId = "&units=metric&appid=" + process.env.REACT_APP_WEATHER_API_KEY
                 axios.get("https://api.openweathermap.org/data/2.5/weather?" + lattlong + appId)
                 .then(response => {
                     console.log(response.data)

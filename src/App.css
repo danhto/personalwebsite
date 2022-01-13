@@ -47,17 +47,37 @@
   display: flex;
   justify-content: center;
   font-size: 42px;
+  padding: 30px 0;
+  height: 0;
+  text-decoration: underline;
+  text-decoration-color: #007bff;
 }
 
 .app-main-logo {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+}
+
+.slider {
+  animation-name: slider;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
 
 ReactTransitionGroup {
   display: flex;
   justify-content: center;
   font-size: 42px;
+}
+
+@keyframes slider {
+  0% {
+    height: 0;
+    transform: scale(0);
+  }
+  100% {
+    height: auto;
+    transform: scale(2.5);
+  }
 }
 
 @keyframes App-logo-spin {

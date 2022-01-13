@@ -64,7 +64,7 @@ class MDBPanelStarwars extends React.Component<Props, State> {
     }   
 
     getStarwarsData = () => {
-        axios.get("https://swapi.co/api/"+this.props.api+"/"+this.state.index+"/")
+        axios.get("https://swapi.py4e.com/api/"+this.props.api+"/"+this.state.index+"/")
         .then(response => {
             switch (this.props.api) {
                 case "people": {
@@ -142,11 +142,11 @@ class MDBPanelStarwars extends React.Component<Props, State> {
                                 <h3 className="starwars-name">
                                     {pData.name}
                                 </h3>
-                                <img src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/74889/1367934593.png" className="starwars-content-person-icon" /> 
+                                <img src="https://www.mcicon.com/wp-content/uploads/2021/01/People_Human_1-copy-8.jpg" className="starwars-content-person-icon" /> 
                             </div>
                             <p className="starwars-content-data">
                                 {pData.name} was born in the year {pData.birth_year}.
-                                {pData.gender == "male" ? " He " : " She "} weighs {pData.mass} kg and is {pData.height} cm tall. 
+                                {pData.gender === "male" ? " He " : " She "} weighs {pData.mass} kg and is {pData.height} cm tall. 
                             </p>
                         </>
                     )
@@ -160,7 +160,7 @@ class MDBPanelStarwars extends React.Component<Props, State> {
                             <h3 className="starwars-name">
                                 {sData.name}
                             </h3>
-                            <img src="http://clipart-library.com/images/rijKoRLjT.png" className="starwars-content-starship-icon" /> 
+                            <img src="https://www.mcicon.com/wp-content/uploads/2021/07/Rocket-08.jpg" className="starwars-content-starship-icon" /> 
                         </div>
                         <p className="starwars-content-data">
                             Cost in galatic credits {sData.cost_in_credits} <br/>

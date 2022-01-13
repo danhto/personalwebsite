@@ -215,6 +215,14 @@ class Sorter extends React.Component<SorterProps, SorterState> {
     }
 
     render() {
+        if (true) {
+            return (
+                <div className="placeholder">
+                    Not quite ready yet ...
+                </div>
+            )
+        }
+
         return (
             <div className="wrapper">
                 <div>

@@ -6,7 +6,16 @@ import {MDBBtn, MDBNavLink} from 'mdbreact'
 const App = () => {
     const [visible, setVisible] = useState(false)
     const toggle = () => {
-        setVisible(!visible)
+        toggleSlider()
+    }
+    const toggleSlider = () => {
+        let text = document.querySelector(".app-main-hidden-content");
+        if (text && !text.classList.contains('slider')) {
+            text.classList.add('slider')
+        }
+        else if (text) {
+            text.classList.remove('slider')
+        }
     }
 
     return (
@@ -18,11 +27,9 @@ const App = () => {
             <div className="app-main-text">
                 <p> You've arrived at the one stop shop for everything Dan To. </p>
             </div>
-            {visible ?
-                <div className="app-main-hidden-content">
-                    <MDBNavLink to="/personalwebsite/about">TELL ME MORE!</MDBNavLink>
-                </div>
-            : null }
+            <div className="app-main-hidden-content">
+                <MDBNavLink to="/personalwebsite/about">TELL ME MORE!</MDBNavLink>
+            </div>
             <div className="app-main-logo">
                 <MDBBtn outline onClick={toggle}>
                     <img src={logo} className="App-logo" alt="logo" />
