@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/personalwebsite/static/css/main.9b72cbc5.chunk.css",
-    "main.js": "/personalwebsite/static/js/main.472702a7.chunk.js",
-    "main.js.map": "/personalwebsite/static/js/main.472702a7.chunk.js.map",
+    "main.css": "/personalwebsite/static/css/main.d92dd790.chunk.css",
+    "main.js": "/personalwebsite/static/js/main.ab52d23b.chunk.js",
+    "main.js.map": "/personalwebsite/static/js/main.ab52d23b.chunk.js.map",
     "runtime~main.js": "/personalwebsite/static/js/runtime~main.29a1488c.js",
     "runtime~main.js.map": "/personalwebsite/static/js/runtime~main.29a1488c.js.map",
     "static/css/2.c53380ee.chunk.css": "/personalwebsite/static/css/2.c53380ee.chunk.css",
-    "static/js/2.bdab11a8.chunk.js": "/personalwebsite/static/js/2.bdab11a8.chunk.js",
-    "static/js/2.bdab11a8.chunk.js.map": "/personalwebsite/static/js/2.bdab11a8.chunk.js.map",
+    "static/js/2.bed30dfb.chunk.js": "/personalwebsite/static/js/2.bed30dfb.chunk.js",
+    "static/js/2.bed30dfb.chunk.js.map": "/personalwebsite/static/js/2.bed30dfb.chunk.js.map",
     "index.html": "/personalwebsite/index.html",
-    "precache-manifest.bb8300a0babf4dd1021a88356b3ca440.js": "/personalwebsite/precache-manifest.bb8300a0babf4dd1021a88356b3ca440.js",
+    "precache-manifest.ef7c5ceadbf9e1931f8de87647ffd1f1.js": "/personalwebsite/precache-manifest.ef7c5ceadbf9e1931f8de87647ffd1f1.js",
     "service-worker.js": "/personalwebsite/service-worker.js",
     "static/css/2.c53380ee.chunk.css.map": "/personalwebsite/static/css/2.c53380ee.chunk.css.map",
-    "static/css/main.9b72cbc5.chunk.css.map": "/personalwebsite/static/css/main.9b72cbc5.chunk.css.map",
+    "static/css/main.d92dd790.chunk.css.map": "/personalwebsite/static/css/main.d92dd790.chunk.css.map",
     "static/media/mdb.css": "/personalwebsite/static/media/arrow_right.8ef6a08c.svg",
     "static/media/cat.jpg": "/personalwebsite/static/media/cat.4d284ef0.jpg",
     "static/media/all.min.css": "/personalwebsite/static/media/fa-solid-900.f14c3b2f.ttf",
@@ -23,7 +23,9 @@
     "static/media/knowledge.png": "/personalwebsite/static/media/knowledge.6e575bdb.png",
     "static/media/leafs.jpg": "/personalwebsite/static/media/leafs.df616bb5.jpg",
     "static/media/logo.svg": "/personalwebsite/static/media/logo.ee7cd8ed.svg",
+    "static/media/monster.png": "/personalwebsite/static/media/monster.0ad851a1.png",
     "static/media/prague.jpg": "/personalwebsite/static/media/prague.df34e8fa.jpg",
-    "static/media/snowboarding.jpg": "/personalwebsite/static/media/snowboarding.446e9b3d.jpg"
+    "static/media/snowboarding.jpg": "/personalwebsite/static/media/snowboarding.446e9b3d.jpg",
+    "static/media/spaceship.png": "/personalwebsite/static/media/spaceship.7ff85897.png"
   }
 }
